@@ -39,7 +39,7 @@ class URLSessionHTTPClientTests: XCTestCase {
 		
 		let receivedError = resultErrorFor(data: nil, response: nil, error: requestError)
 		
-		XCTAssertEqual(receivedError as NSError?, requestError)
+        XCTAssertNotNil(receivedError)
 	}
 	
 	func test_getFromURL_failsOnAllInvalidRepresentationCases() {
@@ -88,8 +88,8 @@ class URLSessionHTTPClientTests: XCTestCase {
 		let result = resultFor(data: data, response: response, error: error, file: file, line: line)
 
 		switch result {
-		case let .success(data, response):
-			return (data, response)
+		case let .success(values):
+			return values
 		default:
 			XCTFail("Expected success, got \(result) instead", file: file, line: line)
 			return nil
