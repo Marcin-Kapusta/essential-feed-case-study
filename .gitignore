@@ -1,5 +1,10 @@
 # Created by https://www.gitignore.io/api/swift,xcode
 
+### macOS-specific files
+.DS_Store
+.Trashes
+Thumbs.db
+
 ### Swift ###
 # Xcode
 #
