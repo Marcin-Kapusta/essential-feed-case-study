@@ -35,6 +35,10 @@ final public class FeedViewController: UITableViewController, UITableViewDataSou
 		tableView.prefetchDataSource = self
 		load()
 	}
+    
+    public override func viewIsAppearing(_ animated: Bool) {
+        super.viewIsAppearing(animated)
+    }
 	
 	@objc private func load() {
 		refreshControl?.beginRefreshing()
