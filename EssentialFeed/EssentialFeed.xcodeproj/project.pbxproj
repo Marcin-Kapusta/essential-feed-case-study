@@ -56,6 +56,7 @@
 		128A1DDE2D6CE32D00183BBF /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 128A1DDB2D6CE32D00183BBF /* FeedViewController.swift */; };
 		128A1DE22D6CE32E00183BBF /* FeedImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 128A1DDF2D6CE32E00183BBF /* FeedImageCell.swift */; };
 		128A1DE32D6CE32E00183BBF /* UIView+Shimmering.swift in Sources */ = {isa = PBXBuildFile; fileRef = 128A1DE02D6CE32E00183BBF /* UIView+Shimmering.swift */; };
+		128A1DE52D6CEA0700183BBF /* FeedImageCellController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 128A1DE42D6CEA0500183BBF /* FeedImageCellController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -141,6 +142,7 @@
 		128A1DDB2D6CE32D00183BBF /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		128A1DDF2D6CE32E00183BBF /* FeedImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedImageCell.swift; sourceTree = "<group>"; };
 		128A1DE02D6CE32E00183BBF /* UIView+Shimmering.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Shimmering.swift"; sourceTree = "<group>"; };
+		128A1DE42D6CEA0500183BBF /* FeedImageCellController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedImageCellController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -412,6 +414,7 @@
 		128A1DDC2D6CE32D00183BBF /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				128A1DE42D6CEA0500183BBF /* FeedImageCellController.swift */,
 				128A1DDA2D6CE32D00183BBF /* FeedRefreshViewController.swift */,
 				128A1DDB2D6CE32D00183BBF /* FeedViewController.swift */,
 			);
@@ -735,6 +738,7 @@
 				128A1DE22D6CE32E00183BBF /* FeedImageCell.swift in Sources */,
 				128A1DE32D6CE32E00183BBF /* UIView+Shimmering.swift in Sources */,
 				128A1DDE2D6CE32D00183BBF /* FeedViewController.swift in Sources */,
+				128A1DE52D6CEA0700183BBF /* FeedImageCellController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
