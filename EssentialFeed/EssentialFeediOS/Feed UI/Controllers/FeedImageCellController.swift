@@ -10,13 +10,12 @@ import UIKit
 import EssentialFeed
 
 final class FeedImageCellController {
-    private var imageLoadingTask: FeedImageDataLoaderTask?
     private let model: FeedImage
-    private let imageLoader: FeedImageDataLoader
+    private(set) var imageController: FeedImageLoadController
     
-    init(model: FeedImage, imageLoader: FeedImageDataLoader) {
+    init(model: FeedImage, imageController: FeedImageLoadController) {
         self.model = model
-        self.imageLoader = imageLoader
+        self.imageController = imageController
     }
     
     func view() -> UITableViewCell {
@@ -24,34 +23,7 @@ final class FeedImageCellController {
         cell.locationContainer.isHidden = (model.location == nil)
         cell.locationLabel.text = model.location
         cell.descriptionLabel.text = model.description
-        cell.feedImageView.image = nil
-        cell.feedImageRetryButton.isHidden = true
-        cell.feedImageContainer.isShimmering = true
-        
-        let loadImage = { [weak self, weak cell] in
-            guard let self = self else { return }
-
-            self.imageLoadingTask = self.imageLoader.loadImageData(from: model.url) { [weak cell] result in
-                let data = try? result.get()
-                let image = data.map(UIImage.init) ?? nil
-                cell?.feedImageView.image = image
-                cell?.feedImageRetryButton.isHidden = (image != nil)
-                cell?.feedImageContainer.isShimmering = false
-            }
-        }
-        
-        cell.onRetry = loadImage
-        loadImage()
-        
+        cell.imageLoadView = imageController.view()
         return cell
-    }
-    
-    func preload() {
-        imageLoadingTask = imageLoader.loadImageData(from: model.url, completion: { _ in })
-    }
-    
-    func cancelLoad() {
-        imageLoadingTask?.cancel()
-        imageLoadingTask = nil
     }
 }

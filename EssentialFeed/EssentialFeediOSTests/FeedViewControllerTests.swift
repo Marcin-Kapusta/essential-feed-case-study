@@ -384,7 +384,7 @@ private extension FeedViewController {
 
 private extension FeedImageCell {
 	func simulateRetryAction() {
-		feedImageRetryButton.simulateTap()
+        imageLoadView.retryButton.simulateTap()
 	}
 
 	var isShowingLocation: Bool {
@@ -392,11 +392,11 @@ private extension FeedImageCell {
 	}
 	
 	var isShowingImageLoadingIndicator: Bool {
-		return feedImageContainer.isShimmering
+		return imageLoadView.isShimmering
 	}
 
 	var isShowingRetryAction: Bool {
-		return !feedImageRetryButton.isHidden
+		return !imageLoadView.retryButton.isHidden
 	}
 
 	var locationText: String? {
@@ -408,7 +408,7 @@ private extension FeedImageCell {
 	}
 	
 	var renderedImage: Data? {
-		return feedImageView.image?.pngData()
+        return imageLoadView.imageView.image?.pngData()
 	}
 }
 
