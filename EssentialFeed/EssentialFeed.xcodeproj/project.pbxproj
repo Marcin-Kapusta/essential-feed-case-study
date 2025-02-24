@@ -57,6 +57,7 @@
 		128A1DE22D6CE32E00183BBF /* FeedImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 128A1DDF2D6CE32E00183BBF /* FeedImageCell.swift */; };
 		128A1DE32D6CE32E00183BBF /* UIView+Shimmering.swift in Sources */ = {isa = PBXBuildFile; fileRef = 128A1DE02D6CE32E00183BBF /* UIView+Shimmering.swift */; };
 		128A1DE52D6CEA0700183BBF /* FeedImageCellController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 128A1DE42D6CEA0500183BBF /* FeedImageCellController.swift */; };
+		128A1DE82D6CF10F00183BBF /* FeedUIComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 128A1DE72D6CF10E00183BBF /* FeedUIComposer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -143,6 +144,7 @@
 		128A1DDF2D6CE32E00183BBF /* FeedImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedImageCell.swift; sourceTree = "<group>"; };
 		128A1DE02D6CE32E00183BBF /* UIView+Shimmering.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Shimmering.swift"; sourceTree = "<group>"; };
 		128A1DE42D6CEA0500183BBF /* FeedImageCellController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedImageCellController.swift; sourceTree = "<group>"; };
+		128A1DE72D6CF10E00183BBF /* FeedUIComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedUIComposer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -405,6 +407,7 @@
 		128A1DC82D6CDEB000183BBF /* Feed UI */ = {
 			isa = PBXGroup;
 			children = (
+				128A1DE62D6CF08500183BBF /* Composers */,
 				128A1DDC2D6CE32D00183BBF /* Controllers */,
 				128A1DE12D6CE32E00183BBF /* Views */,
 			);
@@ -428,6 +431,14 @@
 				128A1DE02D6CE32E00183BBF /* UIView+Shimmering.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		128A1DE62D6CF08500183BBF /* Composers */ = {
+			isa = PBXGroup;
+			children = (
+				128A1DE72D6CF10E00183BBF /* FeedUIComposer.swift */,
+			);
+			path = Composers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -739,6 +750,7 @@
 				128A1DE32D6CE32E00183BBF /* UIView+Shimmering.swift in Sources */,
 				128A1DDE2D6CE32D00183BBF /* FeedViewController.swift in Sources */,
 				128A1DE52D6CEA0700183BBF /* FeedImageCellController.swift in Sources */,
+				128A1DE82D6CF10F00183BBF /* FeedUIComposer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
