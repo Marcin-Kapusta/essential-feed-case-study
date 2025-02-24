@@ -11,11 +11,11 @@ import EssentialFeed
 
 final class FeedImageCellController {
     private let model: FeedImage
-    private(set) var imageController: FeedImageLoadController
+    private(set) var imageLoadController: FeedImageLoadController
     
-    init(model: FeedImage, imageController: FeedImageLoadController) {
+    init(model: FeedImage, imageLoadController: FeedImageLoadController) {
         self.model = model
-        self.imageController = imageController
+        self.imageLoadController = imageLoadController
     }
     
     func view() -> UITableViewCell {
@@ -23,7 +23,7 @@ final class FeedImageCellController {
         cell.locationContainer.isHidden = (model.location == nil)
         cell.locationLabel.text = model.location
         cell.descriptionLabel.text = model.description
-        cell.imageLoadView = imageController.view()
+        cell.imageLoadView = imageLoadController.view()
         return cell
     }
 }
